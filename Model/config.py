@@ -15,6 +15,7 @@ TESS_ORIGINAL_FOLDER_PATH = Path for the TESS dataset original folder (used by t
 """
 import sys
 import pathlib
+from pathlib import Path
 
 working_dir_path = pathlib.Path().absolute()
 
@@ -26,6 +27,8 @@ if sys.platform.startswith('win32'):
     DATASET_DIR_PATH = str(working_dir_path) + '\\datasets\\'
     EXAMPLES_PATH = str(working_dir_path) + '\\examples\\'
     CHECKPOINTS_DIR_PATH = str(working_dir_path) + '\\checkpoints\\'
+    VIDEOS_FILE_PATH = str(Path(working_dir_path).parent[0]) + '\\videos\\'
+    AUDIO_ONLY_PATH = str(Path(working_dir_path).parent[0]) + '\\AudioOnly\\'
 else:
     MODEL_DIR_PATH = str(working_dir_path) + '/model/'
     TESS_ORIGINAL_PATH = str(working_dir_path) + \
@@ -34,3 +37,5 @@ else:
     DATASET_DIR_PATH = str(working_dir_path) + '/datasets/'
     EXAMPLES_PATH = str(working_dir_path) + '/examples/'
     CHECKPOINTS_DIR_PATH = str(working_dir_path) + '/checkpoints/'
+    VIDEOS_FILE_PATH = str(Path(working_dir_path).parent[0]) + '/videos/'
+    AUDIO_ONLY_PATH = str(Path(working_dir_path).parent[0]) + '/AudioOnly/'
