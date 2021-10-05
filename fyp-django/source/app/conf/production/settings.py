@@ -68,8 +68,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.office365.com'
 EMAIL_HOST_USER = 'piong_zy@hotmail.com'
 DEFAULT_FROM_EMAIL = 'piong_zy@hotmail.com'
-EMAIL_HOST_PASSWORD = 'H0w@reyou'
-EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'pxwweoljgoblofom'
+EMAIL_PORT = 465
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
@@ -95,7 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-ENABLE_USER_ACTIVATION = True
+ENABLE_USER_ACTIVATION = False
 DISABLE_USERNAME = False
 LOGIN_VIA_EMAIL = False
 LOGIN_VIA_EMAIL_OR_USERNAME = True

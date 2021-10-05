@@ -16,7 +16,7 @@
 
     <link rel="icon" href="{% static 'favicon.ico' %}">
 
-    <title>Psychotherapy powered by AI</title>
+    <title>Simple Django Login and Registration</title>
 
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
@@ -53,7 +53,7 @@
                     <a class="nav-link" href="{% url 'accounts:log_in' %}">{% trans 'Log in' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'accounts:sign_up' %}">{% trans 'Register' %}</a>
+                    <a class="nav-link" href="{% url 'accounts:sign_up' %}">{% trans 'Create an account' %}</a>
                 </li>
             {% endif %}
         </ul>
@@ -76,7 +76,6 @@
     {% endblock %}
 
 </div>
-
 
 <script src="{% static 'vendor/jquery/jquery-3.4.1.min.js' %}"></script>
 <script src="{% static 'vendor/popper/popper.min.js' %}"></script>
