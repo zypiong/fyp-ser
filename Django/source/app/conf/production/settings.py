@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     # Application apps
     'main',
     'accounts',
-    # 'videos',
+    'videos',
 ]
 
 MIDDLEWARE = [
