@@ -1,0 +1,20 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+
+    <h4>{% trans 'Search' %}</h4>
+    <form method="post">{% csrf_token %}
+
+        <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="search_bar" placeholder="Enter Your Search">
+            </div>
+            <button type="Search" class="btn btn-primary">Search</button>
+        </form>
+
+    </form>
+
+{% endblock %}

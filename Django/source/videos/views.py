@@ -17,4 +17,4 @@ def VideosView(request):
                'searchresults': searchresults,
                }
 
-    return render(request, 'videos/search_video.html', context)
+    return render(request, 'videos/search_bar.html', context)
