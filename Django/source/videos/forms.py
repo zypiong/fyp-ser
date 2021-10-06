@@ -1,4 +1,5 @@
-from Django import forms
+from django import forms
+
 
 class VideoSearchForm(forms.Form):
-    search= forms.CharField(max_length=100)
+    search = forms.CharField(max_length=100)

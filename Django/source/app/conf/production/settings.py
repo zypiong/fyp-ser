@@ -15,6 +15,7 @@ ALLOWED_HOSTS = [
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    'videos.contrib.VideoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -28,6 +29,7 @@ INSTALLED_APPS = [
     # Application apps
     'main',
     'accounts',
+    'videos',
 ]
 
 MIDDLEWARE = [
@@ -99,8 +101,8 @@ ENABLE_USER_ACTIVATION = False
 DISABLE_USERNAME = False
 LOGIN_VIA_EMAIL = False
 LOGIN_VIA_EMAIL_OR_USERNAME = True
-LOGIN_REDIRECT_URL = 'index'
-LOGIN_URL = 'videos:search'
+LOGIN_REDIRECT_URL = 'search'
+LOGIN_URL = 'accounts:log_in'
 USE_REMEMBER_ME = False
 
 RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = True
