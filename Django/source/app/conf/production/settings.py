@@ -15,7 +15,7 @@ ALLOWED_HOSTS = [
 SITE_ID = 1
 
 INSTALLED_APPS = [
-    'videos.contrib.VideoConfig',
+    'videos.apps.VideosConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     # Application apps
     'main',
     'accounts',
-    'videos',
+    # 'videos',
 ]
 
 MIDDLEWARE = [
