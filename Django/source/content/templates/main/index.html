@@ -8,6 +8,23 @@
 
         {% trans 'Your username is' %} <b>{{ request.user.username }}</b>.
 
+        <p>&nbsp;</p> 
+        <h4>{% trans 'Search' %}</h4>
+        <form method="get">
+            <form>
+                <div class="form-group">
+                {% csrf_token %}
+                <input type="text" class="form-control" id="search_bar" placeholder="Enter Your Search">
+                </div>
+                <a href="{% url 'videos:search' %}"><button>Search</button></a>
+                <!---<a class="button" href="{% url 'videos:search' %}">Search</a>
+                <button><a href="{% url 'videos:search' %}">Search</a></button>
+                <button type="Search" class="btn btn-primary">Search</button>--->
+            </form>
+    
+        </form>
+
+
     {% else %}
 
         {% trans 'You are a guest.' %}
