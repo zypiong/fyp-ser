@@ -7,5 +7,5 @@ from .views import (
 app_name = 'videos'
 
 urlpatterns = [
-    path('search-video/<str:search_content>', VideosView, name='search')
+    path('search-video/', VideosView, name='search')
 ]
