@@ -1,0 +1,45 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+
+        {% trans 'Your username is' %} <b>{{ request.user.username }}</b>.
+        
+        <p>&nbsp;</p> 
+        <h4>{% trans 'Search' %}</h4>
+        <form method="post">
+
+            {% csrf_token %}
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <form class="search-bar" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+
+            <!---
+            <form>
+                <div class="form-group">
+                {% csrf_token %}
+                <input type="text" class="form-control" id="search_bar" placeholder="Enter Your Search">
+                </div>
+                <a href="{% url 'accounts:search' %}"><button>Search</button></a>
+                <!---<a class="button" href="{% url 'videos:search' %}">Search</a>
+                <button><a href="{% url 'videos:search' %}">Search</a></button>
+                <button type="Search" class="btn btn-primary">Search</button>--->
+            <!---</form>
+    
+        </form>--->
+
+
+    {% else %}
+
+        {% trans 'You are a guest.' %}
+
+    {% endif %}
+
+{% endblock %}
